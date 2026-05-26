@@ -1,43 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Business Name</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vector Labs | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; margin: 40px; max-width: 1000px; }
-    h1 { font-size: 32px; }
-    .product { border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Inter',sans-serif;
+      background:#0b1220;
+      color:#fff;
+      line-height:1.6;
+    }
+    nav {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(11,18,32,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav a {
+      color:#c7d1de;
+      text-decoration:none;
+      margin-left:1.5rem;
+    }
+    header {
+      min-height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:2rem;
+      background:
+      radial-gradient(circle at top, rgba(0,160,255,0.18), transparent 40%),
+      linear-gradient(180deg,#0b1220 0%,#10192e 100%);
+    }
+    .logo svg { width:160px; height:160px; }
+    h1 {
+      font-size:4rem;
+      font-weight:800;
+      letter-spacing:-2px;
+      margin:1rem 0;
+    }
+    .accent { color:#47c2ff; }
+    .subtitle {
+      max-width:760px;
+      font-size:1.2rem;
+      color:#b9c4d3;
+      margin-bottom:2rem;
+    }
     .button {
-      background: black;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
+      display:inline-block;
+      padding:14px 28px;
+      background:#47c2ff;
+      color:#071018;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+    }
+    section {
+      max-width:1200px;
+      margin:auto;
+      padding:5rem 2rem;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    }
+    .card {
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:2rem;
+      transition:0.25s ease;
+    }
+    .card:hover {
+      transform:translateY(-4px);
+      border-color:rgba(71,194,255,0.5);
+    }
+    footer {
+      text-align:center;
+      padding:3rem 2rem;
+      color:#7d8795;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    pre {
+      background:#111a2e;
+      padding:1.5rem;
+      border-radius:16px;
+      overflow:auto;
+      margin-top:2rem;
+      color:#8fe3ff;
+    }
+    @media (max-width:768px){
+      h1{font-size:2.8rem;}
+      nav{justify-content:center;gap:1rem;}
+      nav a{margin:0;}
     }
   </style>
 </head>
 <body>
 
-<h1>Your Business Name</h1>
-<p>Wind Tunnel Tested 3D Printed Parts</p>
+<nav>
+  <div style="font-weight:800;font-size:1.2rem;">Vector <span class="accent">Labs</span></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Products</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="design-testing.html">Design & Testing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-<h2>Standard Parts</h2>
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="84" stroke="#47C2FF" stroke-width="6" opacity="0.4"/>
+      <path d="M40 120C70 80 110 70 160 78" stroke="#47C2FF" stroke-width="10" stroke-linecap="round"/>
+      <path d="M68 98L160 78L100 132" fill="#47C2FF"/>
+    </svg>
+  </div>
 
-<div class="product">
-  <h3>WT-100 Wind Tunnel Mount</h3>
-  <p>Carbon Fiber Nylon. ±0.1mm tolerance.</p>
-  <a class="button" href="https://buy.stripe.com/test_6oUaEPcLAeNGenj57rco001">
-    Add to Order
-  </a>
-</div>
+  <h1>Vector <span class="accent">Labs</span></h1>
 
-<h2>Custom CAD Orders</h2>
-<p>Need a custom part?</p>
-<a class="button" href="custom.html">
-  Request Quote
-</a>
+  <p class="subtitle">
+    Aerospace-inspired aerodynamic testing, rapid prototyping, and engineering support for innovators, researchers, RC aircraft builders, and specialty fabrication projects.
+  </p>
+
+  <a class="button" href="shop.html">View Products</a>
+</header>
+
+<section>
+  <h2 style="font-size:2.5rem;margin-bottom:1rem;">Multi-Page Website Structure</h2>
+
+  <p style="color:#b9c4d3;max-width:800px;">
+    Your website is now organized into separate pages for easier navigation, cleaner code management, and future expansion with Stripe, product listings, and customer inquiry forms.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>shop.html</h3>
+      <p>3D printed aerospace components, custom fabrication requests, and future product ordering integrations.</p>
+    </div>
+
+    <div class="card">
+      <h3>consulting.html</h3>
+      <p>Independent engineering consultants, SME partnerships, technical reviews, and outsourced expertise.</p>
+    </div>
+
+    <div class="card">
+      <h3>design-testing.html</h3>
+      <p>Wind tunnel services, aerodynamic testing, CAD design, airflow refinement, and prototype validation.</p>
+    </div>
+
+    <div class="card">
+      <h3>contact.html</h3>
+      <p>Customer inquiry forms, quote requests, project submissions, and future Stripe/checkout integrations.</p>
+    </div>
+  </div>
+
+  <pre>
+Recommended GitHub File Structure:
+
+/index.html
+/shop.html
+/consulting.html
+/design-testing.html
+/contact.html
+/styles.css
+/assets/logo.svg
+/assets/images/
+  </pre>
+</section>
+
+<section>
+  <h2 style="font-size:2.5rem;margin-bottom:1rem;">Recommended Next Step</h2>
+
+  <p style="color:#b9c4d3;max-width:800px;">
+    Create each HTML page separately using the same navigation and styling structure. This keeps the site modular and makes future edits much easier as your aerospace business expands.
+  </p>
+</section>
+
+<footer>
+  © 2026 Vector Labs · Aerodynamic Testing & Engineering
+</footer>
 
 </body>
 </html>
