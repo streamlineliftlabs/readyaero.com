@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Vector Labs</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0d1117;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #c9d1d9;
+    }
+
+    nav {
+      background-color: #161b22;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card h3 {
+      margin-top: 0;
+      color: #0d1117;
+    }
+
+    .product-card p {
+      color: #555;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #0d1117;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #238636;
+    }
+
+    .custom-section {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .custom-section h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .custom-section p {
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .capabilities {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .capabilities li {
+      margin-bottom: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .custom-section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Vector Labs</h1>
+    <p>Precision 3D Printed Aerodynamic Components & Wind Tunnel Services</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="capabilities.html">Capabilities</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Standard Products</h2>
+      <p>Repeatable aerodynamic components designed for testing, prototyping, and research applications.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <h3>50-Pack Vortex Generators</h3>
+        <p>
+          Lightweight precision PETG vortex generators for RC aircraft,
+          UAVs, aerodynamic experiments, and wind tunnel testing.
+        </p>
+
+        <div class="price">$19.99</div>
+
+        <a class="button" href="YOUR_STRIPE_PAYMENT_LINK">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="product-card">
+        <h3>Wind Tunnel Mount Kit</h3>
+        <p>
+          Modular mounting system for aerodynamic testing and fixture development.
+        </p>
+
+        <div class="price">$49.99</div>
+
+        <a class="button" href="YOUR_STRIPE_PAYMENT_LINK">
+          Buy Now
+        </a>
+      </div>
+
+      <div class="product-card">
+        <h3>Custom Aerodynamic Fixtures</h3>
+        <p>
+          Precision printed experimental hardware for flow visualization,
+          prototyping, and laboratory testing.
+        </p>
+
+        <div class="price">Quote Required</div>
+
+        <a class="button" href="#custom-orders">
+          Request Quote
+        </a>
+      </div>
+
+    </div>
+
+    <div class="custom-section" id="custom-orders">
+
+      <h2>Custom CAD Upload & Quote Request</h2>
+
+      <p>
+        Upload your STL, STEP, STP, or IGES files for review and quotation.
+        We support custom aerodynamic components, wind tunnel fixtures,
+        prototype assemblies, and engineering development parts.
+      </p>
+
+      <ul class="capabilities">
+        <li>✔ Wind tunnel prototype fabrication</li>
+        <li>✔ UAV and RC aerodynamic components</li>
+        <li>✔ Functional engineering prototypes</li>
+        <li>✔ Rapid iteration and testing support</li>
+        <li>✔ Small-batch production capability</li>
+      </ul>
+
+      <p>
+        Accepted formats:
+        STL, STEP, STP, IGES
+      </p>
+
+      <p>
+        For security purposes, executable or compressed archive files are not accepted.
+      </p>
+
+      <!-- TALLY FORM EMBED -->
+      <iframe
+        data-tally-src="https://tally.so/r/YOUR_TALLY_FORM_ID"
+        loading="lazy"
+        title="Custom Quote Request">
+      </iframe>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      © 2026 Vector Labs | Precision 3D Printing & Aerodynamic Development
+    </p>
+  </footer>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+</body>
+</html>
